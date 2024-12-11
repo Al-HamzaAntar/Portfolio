@@ -1,7 +1,9 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Code2, Palette, Lightbulb } from "lucide-react";
+import { useTranslation } from 'react-i18next';
 
 const About = () => {
+  const { t } = useTranslation();
   const features = [
     {
       icon: <Code2 className="h-6 w-6" />,
@@ -24,10 +26,9 @@ const About = () => {
     <section id="about" className="py-16 md:py-24 bg-muted/50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center">
-          <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">About Me</h2>
+          <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">{t('about.title')}</h2>
           <p className="mt-4 text-lg text-muted-foreground max-w-2xl mx-auto">
-            I'm a full-stack developer with a passion for creating exceptional digital experiences.
-            With years of experience in web development, I specialize in building modern, responsive applications.
+          {t('about.description')}
           </p>
         </div>
 

@@ -1,7 +1,9 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Progress } from "@/components/ui/progress";
+import { useTranslation } from 'react-i18next';
 
 const Skills = () => {
+  const { t } = useTranslation();
   const skills = [
     { name: "Figma", level: 95 },
     { name: "HTML", level: 95 },
@@ -19,9 +21,9 @@ const Skills = () => {
     <section id="skills" className="py-16 md:py-24">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center">
-          <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">Skills</h2>
+          <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">{t('skills.title')}</h2>
           <p className="mt-4 text-lg text-muted-foreground max-w-2xl mx-auto">
-            Here are some of the technologies I work with on a daily basis
+            {t('skills.description')}
           </p>
         </div>
 

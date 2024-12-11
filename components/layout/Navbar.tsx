@@ -5,8 +5,12 @@ import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { ThemeToggle } from "@/components/theme/ThemeToggle";
 import Link from "next/link";
+import { useTranslation } from 'react-i18next';
+
+
 
 const Navbar = () => {
+  const { t } = useTranslation();
   const [isOpen, setIsOpen] = useState(false);
 
   const navItems = [
@@ -21,11 +25,11 @@ const Navbar = () => {
   ];
 
   return (
-    <nav className="fixed top-0 w-full bg-background/80 backdrop-blur-sm z-50 border-b">
+    <nav className="fixed top-0 w-full bg-background/80 backdrop-blur-sm z-50 border-b" >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           <div className="flex-shrink-0">
-            <Link href={"/#home"}><h1 className="text-2xl font-bold">Al-Hamza Antar</h1></Link>
+            <Link href={"/#home"}><h1 className="text-2xl font-bold">{t('header.name')}</h1></Link>
           </div>
           
           <div className="hidden md:flex md:items-center md:space-x-6">

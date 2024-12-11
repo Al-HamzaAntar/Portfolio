@@ -1,7 +1,9 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { GraduationCap } from "lucide-react";
+import { useTranslation } from 'react-i18next';
 
 const Education = () => {
+  const { t } = useTranslation();
   const education = [
     {
       degree: "IC3",
@@ -27,9 +29,9 @@ const Education = () => {
     <section id="education" className="py-16 md:py-24">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center">
-          <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">Education</h2>
+          <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">{t('education.title')}</h2>
           <p className="mt-4 text-lg text-muted-foreground max-w-2xl mx-auto">
-            My academic background and continuous learning journey
+            {t('education.description')}
           </p>
         </div>
 

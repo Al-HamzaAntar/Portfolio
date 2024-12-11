@@ -1,7 +1,9 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Briefcase } from "lucide-react";
+import { useTranslation } from 'react-i18next';
 
 const Experience = () => {
+  const { t } = useTranslation();
   const experiences = [
     {
       position: "Junior Developer",
@@ -20,9 +22,9 @@ const Experience = () => {
     <section id="experience" className="py-16 md:py-24 bg-muted/50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center">
-          <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">Experience</h2>
+          <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">{t('experience.title')}</h2>
           <p className="mt-4 text-lg text-muted-foreground max-w-2xl mx-auto">
-            My professional journey and key achievements
+            {t('experience.description')}
           </p>
         </div>
 

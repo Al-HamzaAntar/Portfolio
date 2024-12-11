@@ -6,18 +6,38 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Mail, Phone, MapPin } from "lucide-react";
+import { useTranslation } from 'react-i18next';
 
 const Contact = () => {
+  const { t } = useTranslation();
   const [formData, setFormData] = useState({
     name: "",
     email: "",
     message: "",
   });
+  const [status, setStatus] = useState<string | null>(null);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     // Handle form submission
-    console.log(formData);
+    try {
+      const response = await fetch("https://formspree.io/f/mwpkjrve", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
+
+      if (response.ok) {
+        setStatus("Thank you for your message!");
+        setFormData({ name: "", email: "", message: "" });
+      } else {
+        setStatus("Oops! Something went wrong. Please try again.");
+      }
+    } catch (error) {
+      setStatus("Oops! Something went wrong. Please try again.");
+    }
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -31,7 +51,7 @@ const Contact = () => {
     {
       icon: <Mail className="h-6 w-6" />,
       title: "Email",
-      details: "hamzaantar2001@gmail.com",
+      details: "Al-HamzaAntar@outlook.sa",
     },
     {
       icon: <Phone className="h-6 w-6" />,
@@ -49,47 +69,50 @@ const Contact = () => {
     <section id="contact" className="py-16 md:py-24">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center">
-          <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">Contact Me</h2>
+          <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">{t('contact.title')}</h2>
           <p className="mt-4 text-lg text-muted-foreground max-w-2xl mx-auto">
-            Have a question or want to work together? Feel free to reach out!
+          {t('contact.description')}
           </p>
         </div>
 
         <div className="mt-16 grid gap-8 md:grid-cols-2">
           <Card>
             <CardHeader>
-              <CardTitle>Send a Message</CardTitle>
-              <CardDescription>Fill out the form below and I'll get back to you as soon as possible.</CardDescription>
+              <CardTitle>{t('send.title')}</CardTitle>
+              <CardDescription>{t('send.description')}</CardDescription>
             </CardHeader>
             <CardContent>
               <form onSubmit={handleSubmit} className="space-y-4">
                 <div>
                   <Input
-                    placeholder="Your Name"
+                    placeholder={t('send.name')}
                     name="name"
                     value={formData.name}
                     onChange={handleChange}
+                    required
                   />
                 </div>
                 <div>
                   <Input
                     type="email"
-                    placeholder="Your Email"
+                    placeholder={t('send.email')}
                     name="email"
                     value={formData.email}
                     onChange={handleChange}
+                    required  
                   />
                 </div>
                 <div>
                   <Textarea
-                    placeholder="Your Message"
+                    placeholder={t('send.message')}
                     name="message"
                     value={formData.message}
                     onChange={handleChange}
                     rows={4}
+                    required
                   />
                 </div>
-                <Button type="submit" className="w-full">Send Message</Button>
+                <Button type="submit" className="w-full">{t('send.Send Message')}</Button>
               </form>
             </CardContent>
           </Card>

@@ -80,3 +80,12 @@
     @apply bg-background text-foreground;
   }
 }
+
+
+body {
+  direction: ltr; /* Default for English */
+}
+
+body[lang="ar"] {
+  direction: rtl; /* For Arabic */
+}
