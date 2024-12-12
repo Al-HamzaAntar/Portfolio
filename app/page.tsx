@@ -10,7 +10,7 @@ import Projects from "@/components/sections/Projects";
 import Contact from "@/components/sections/Contact";
 import Footer from "@/components/layout/Footer";
 import ScrollToTop from "@/components/layout/ScrollToTop";
-
+import LanguageSwitcher from "@/components/sections/LanguageSwitcher";
 import { NextIntlClientProvider } from 'next-intl';
 import { useEffect, useState } from 'react';
 import { initReactI18next } from 'react-i18next';
@@ -18,7 +18,7 @@ import { useTranslations } from 'next-intl';
 import i18n from 'i18next';
 import en from '../locales/en.json';
 import ar from '../locales/ar.json';
-import LanguageSwitcher from "@/components/sections/LanguageSwitcher";
+
 
 i18n
   .use(initReactI18next)

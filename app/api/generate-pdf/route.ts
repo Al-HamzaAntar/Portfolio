@@ -11,7 +11,7 @@ export async function POST(request: Request) {
     const chunks: Buffer[] = [];
 
     // Collect PDF data chunks
-    doc.on('data', (chunk) => chunks.push(chunk));
+    doc.on('data', (chunk: any) => chunks.push(chunk));
     
     // Header
     doc.fontSize(24).text(data.name, { align: 'center' });

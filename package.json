@@ -55,6 +55,7 @@
     "next": "13.5.1",
     "next-intl": "^3.26.0",
     "next-themes": "^0.3.0",
+    "pdfkit": "^0.15.1",
     "postcss": "8.4.30",
     "react": "18.2.0",
     "react-day-picker": "^8.10.1",
@@ -72,6 +73,7 @@
   },
   "devDependencies": {
     "@types/node": "22.10.1",
+    "@types/pdfkit": "^0.13.7",
     "@types/react": "18.3.12",
     "typescript": "5.7.2"
   }
