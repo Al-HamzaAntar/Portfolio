@@ -1,6 +1,5 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
-import { DownloadCV } from './DownloadCV';
 import { useTranslation } from 'react-i18next';
 
 import { CVPreview } from '@/components/sections/CVPreview';

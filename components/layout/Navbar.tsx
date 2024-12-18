@@ -31,14 +31,15 @@ const Navbar = () => {
           <div className="flex-shrink-0">
             <Link href={"/#home"}><h1 className="text-2xl font-bold">{t('header.name')}</h1></Link>
           </div>
+
           
           <div className="hidden md:flex md:items-center md:space-x-6">
             <div className="flex items-center space-x-4">
               {navItems.map((item) => (
                 <a
-                  key={item.label}
-                  href={item.href}
-                  className="text-foreground/60 hover:text-foreground px-3 py-2 rounded-md text-sm font-medium transition-colors"
+                key={item.label}
+                href={item.href}
+                className="text-foreground/60 hover:text-foreground px-3 py-2 rounded-md text-sm font-medium transition-colors"
                 >
                   {item.label}
                 </a>
@@ -65,10 +66,10 @@ const Navbar = () => {
           <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
             {navItems.map((item) => (
               <a
-                key={item.label}
-                href={item.href}
-                className="text-foreground/60 hover:text-foreground block px-3 py-2 rounded-md text-base font-medium"
-                onClick={() => setIsOpen(false)}
+              key={item.label}
+              href={item.href}
+              className="text-foreground/60 hover:text-foreground block px-3 py-2 rounded-md text-base font-medium"
+              onClick={() => setIsOpen(false)}
               >
                 {item.label}
               </a>

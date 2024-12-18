@@ -7,6 +7,7 @@ import { generatePDF } from '@/lib/utils/pdf';
 import { CVData } from '@/types/cv';
 import { Button } from '@/components/ui/button';
 
+
 interface DownloadButtonProps {
   data: CVData;
   className?: string;

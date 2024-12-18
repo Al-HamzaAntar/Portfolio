@@ -1,9 +1,12 @@
+import { useState } from "react";
 import { Facebook, Github, Linkedin, Twitter } from "lucide-react";
 import { useTranslation } from 'react-i18next';
+import LanguageSwitcher from "@/components/sections/LanguageSwitcher";
 
 const Footer = () => {
   const { t } = useTranslation();
   const currentYear = new Date().getFullYear();
+  const [locale, setLocale] = useState('en'); // Default locale
 
   return (
     <footer className="bg-muted/50 py-8">
@@ -38,6 +41,7 @@ const Footer = () => {
             >
               <Linkedin className="h-5 w-5" />
             </a>
+            <LanguageSwitcher setLocale={setLocale} />
           </div>
         </div>
       </div>

@@ -10,7 +10,6 @@ import Projects from "@/components/sections/Projects";
 import Contact from "@/components/sections/Contact";
 import Footer from "@/components/layout/Footer";
 import ScrollToTop from "@/components/layout/ScrollToTop";
-import LanguageSwitcher from "@/components/sections/LanguageSwitcher";
 import { NextIntlClientProvider } from 'next-intl';
 import { useEffect, useState } from 'react';
 import { initReactI18next } from 'react-i18next';
@@ -45,7 +44,6 @@ export default function Home() {
     <NextIntlClientProvider locale={locale}>
       <main className="min-h-screen bg-background">
         <Navbar />
-        <LanguageSwitcher setLocale={setLocale} />
         <Hero />
         <About />
         <Education />

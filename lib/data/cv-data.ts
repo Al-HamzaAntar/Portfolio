@@ -32,7 +32,7 @@ export const cvData: CVData = {
   skills: [
     {
       category: "Programming Languages",
-      items: ["TypeScript", "JavaScript", "Python", "SQL"]
+      items: ["JavaScript", "TypeScript", "Python", "SQL"]
     },
     {
       category: "Technologies",
