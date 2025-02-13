@@ -9,20 +9,30 @@ const Education = () => {
       degree: "IC3",
       school: "Speak Now Institute",
       period: "Summer 2020",
+      certificate: "Certificate",
       description: "Microsoft Office",
-    },
-    {
-      degree: "Bachelor of Science in Computer Science",
-      school: "University of Sana'a, Sana'a",
-      period: "2021 - 2025",
-      description: "Full academic scholarship. Dean's List all semesters.",
     },
     {
       degree: "Web Development Bootcamp",
       school: "Sana'a University",
       period: "Summer 2024",
-      description: "Intensive 4-week program focused on modern web technologies.",
+      certificate: "Certificate",
+      description: "Intensive 4-weeks program focused on modern web technologies.",
     },
+    {
+      degree: "CS50",
+      school: "Harvard University",
+      period: "Summer 2025",
+      certificate: "Certificate",
+      description: "Intensive 10-weeks program including ten problems sets and one final project.",
+    },
+    {
+      degree: "Bachelor of Science in Computer Science",
+      school: "University of Sana'a, Sana'a",
+      period: "2021 - 2025",
+      certificate: "Certificate",
+      description: "Full academic scholarship. Dean's List all semesters.",
+    }
   ];
 
   return (
@@ -46,7 +56,10 @@ const Education = () => {
                   <CardTitle className="text-xl">{item.degree}</CardTitle>
                   <p className="text-muted-foreground">{item.school}</p>
                 </div>
-                <div className="text-sm text-muted-foreground">{item.period}</div>
+                {/* <div className="flex flex-col gap-4"> */}
+                  <div className="text-sm text-muted-foreground">{item.period}</div>
+                  <a className="text-muted-foreground relative right-24 top-10">{item.certificate}</a>
+                {/* </div> */}
               </CardHeader>
               <CardContent>
                 <p className="text-muted-foreground">{item.description}</p>
