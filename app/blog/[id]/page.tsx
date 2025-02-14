@@ -79,7 +79,7 @@
 
 //   );
 // }
-
+// ```
 import { getBlogPost, getBlogPosts } from '@/lib/blog';
 import { Calendar, Clock, Tag } from 'lucide-react';
 import Image from 'next/image';
