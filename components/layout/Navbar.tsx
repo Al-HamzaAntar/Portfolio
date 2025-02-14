@@ -23,9 +23,9 @@ const Navbar = () => {
     { label: "Projects", href: "/#projects" },
     { label: "Contact", href: "/#contact" },
   ];
-
+// fixed top-0 w-full bg-background/80 backdrop-blur-sm z-50 border-b
   return (
-    <nav className="fixed top-0 w-full bg-background/80 backdrop-blur-sm z-50 border-b" >
+    <nav className="fixed top-2 left-1/2 -translate-x-1/2 w-11/12  bg-background/80 backdrop-blur-sm z-50 border-b rounded-lg" >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           <div className="flex-shrink-0">

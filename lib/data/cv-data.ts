@@ -2,7 +2,7 @@ import { CVData } from '../../types/cv';
 
 export const cvData: CVData = {
   name: "Al-Hamza Antar",
-  title: " Full Stack Developer",
+  title: " Web Developer",
   summary: "I work with Tammam Company",
   contact: {
     email: "Al-HamzaAntar@outlook.sa",

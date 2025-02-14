@@ -9,28 +9,24 @@ const Education = () => {
       degree: "IC3",
       school: "Speak Now Institute",
       period: "Summer 2020",
-      certificate: "Certificate",
       description: "Microsoft Office",
     },
     {
       degree: "Web Development Bootcamp",
       school: "Sana'a University",
       period: "Summer 2024",
-      certificate: "Certificate",
       description: "Intensive 4-weeks program focused on modern web technologies.",
     },
     {
       degree: "CS50",
       school: "Harvard University",
       period: "Summer 2025",
-      certificate: "Certificate",
       description: "Intensive 10-weeks program including ten problems sets and one final project.",
     },
     {
       degree: "Bachelor of Science in Computer Science",
       school: "University of Sana'a, Sana'a",
       period: "2021 - 2025",
-      certificate: "Certificate",
       description: "Full academic scholarship. Dean's List all semesters.",
     }
   ];
@@ -58,7 +54,6 @@ const Education = () => {
                 </div>
                 {/* <div className="flex flex-col gap-4"> */}
                   <div className="text-sm text-muted-foreground">{item.period}</div>
-                  <a className="text-muted-foreground relative right-24 top-10">{item.certificate}</a>
                 {/* </div> */}
               </CardHeader>
               <CardContent>
